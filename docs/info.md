@@ -1,23 +1,20 @@
-<!---
+# How it works
 
-This file is used to generate your project datasheet. Please fill in the information below and delete any unused
-sections.
+This project is designed to …  
+Opisuję tutaj ogólną architekturę, główne komponenty i sposób działania:
+4. Dane przepływają w następujący sposób:  
+   - krok 1: …  
+   - krok 2: …  
+   - krok 3: …  
 
-You can also include images in this folder and reference them in the markdown. Each image must be less than
-512 kb in size, and the combined size of all images must be less than 1 MB.
--->
+Można też uwzględnić diagramy lub pseudokod, jeśli to pomaga w zrozumieniu.
 
-## How it works
+# How to test
 
-Explain how your project works
-Test test test
+Aby przetestować projekt, wykonaj poniższe kroki:
 
-## How to test
 
-Explain how to use your project
-Test test test
-
-## External hardware
+# External hardware
 
 List external hardware used in your project (e.g. PMOD, LED display, etc), if any
 Test test test
