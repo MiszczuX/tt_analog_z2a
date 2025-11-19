@@ -1,9 +1,9 @@
 # Tiny Tapeout project information
 project:
-  title:        ""      # Project title
-  author:       ""      # Your name
-  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  ""      # One line description of what your project does
+  title:        "Double_inverter"      # Project title
+  author:       "JakubMiszczynski"      # Your name
+  discord:      "MiszczuK"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Non-inverting amp"      # One line description of what your project does
   language:     "Analog" # other examples include Verilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
@@ -25,7 +25,7 @@ project:
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: ""
+  ui[0]: "IN"
   ui[1]: ""
   ui[2]: ""
   ui[3]: ""
@@ -36,7 +36,7 @@ pinout:
 
   # Outputs
   uo[0]: ""
-  uo[1]: ""
+  uo[1]: "OUT"
   uo[2]: ""
   uo[3]: ""
   uo[4]: ""
@@ -55,8 +55,8 @@ pinout:
   uio[7]: ""
 
   # Analog pins - make sure to also set "analog_pins" above, else the pins won't be connected
-  ua[0]: ""
-  ua[1]: ""
+  ua[0]: "IN"
+  ua[1]: "OUT"
   ua[2]: ""
   ua[3]: ""
   ua[4]: ""
