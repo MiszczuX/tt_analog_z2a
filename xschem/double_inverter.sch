@@ -55,9 +55,9 @@ C {devices/iopin.sym} 1600 -1400 0 0 {name=p1 lab=VDD}
 C {devices/iopin.sym} 1600 -1360 0 0 {name=p2 lab=VSS}
 C {sky130_fd_pr/pfet_01v8.sym} 1720 -1350 0 0 {name=M1
 L=0.15
-W=1
+W=10
 nf=1
-mult=1
+mult=10
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -69,9 +69,9 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 1720 -1240 0 0 {name=M2
 L=0.15
-W=1
+W=10
 nf=1 
-mult=1
+mult=10
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -85,9 +85,9 @@ C {devices/lab_wire.sym} 1760 -1170 0 0 {name=p3 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 1760 -1430 0 0 {name=p4 sig_type=std_logic lab=VDD}
 C {sky130_fd_pr/pfet_01v8.sym} 1840 -1350 0 0 {name=M3
 L=0.15
-W=1
+W=10
 nf=1
-mult=1
+mult=10
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -99,9 +99,9 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 1840 -1240 0 0 {name=M4
 L=0.15
-W=1
+W=10
 nf=1 
-mult=1
+mult=10
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 

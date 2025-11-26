@@ -1,0 +1,9 @@
+** sch_path: /home/ttuser/tt_analog_z2a/xschem/double_inverter.sch
+.subckt double_inverter VDD VSS out_amp_inv in_inv_amp
+*.PININFO VDD:B VSS:B in_inv_amp:I out_amp_inv:O
+XM1 net1 in_inv_amp VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=10 nf=1 m=10
+XM2 net1 in_inv_amp VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=10 nf=1 m=10
+XM3 out_amp_inv net1 VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=10 nf=1 m=10
+XM4 out_amp_inv net1 VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=10 nf=1 m=10
+.ends
+.end
