@@ -13,16 +13,17 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-1e-08
-x2=1.9e-07
+x1=-2e-08
+x2=1.8e-07
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
 node="out_buff
 out_buff_int
-vin_buff"
-color="4 8 6"
+vin_buff
+out_buff_ext"
+color="4 8 6 5"
 dataset=-1
 unitx=1
 logx=0
@@ -54,6 +55,20 @@ N 380 -230 380 -210 {
 lab=GND}
 N 380 -310 380 -290 {
 lab=vin_buff}
+N 40 -800 70 -800 {
+lab=vin_buff}
+N 240 -800 270 -800 {
+lab=out_buff_int_ext}
+N 160 -900 160 -860 {
+lab=VDD}
+N 160 -740 160 -710 {
+lab=VSS}
+N 270 -800 340 -800 {
+lab=out_buff_int_ext}
+N 400 -740 400 -710 {
+lab=VSS}
+N 460 -800 480 -800 {
+lab=out_buff_ext}
 C {devices/launcher.sym} 80 -370 0 0 {name=h17 
 descr="Load waves" 
 tclcommand="
@@ -95,7 +110,18 @@ tran 100p 200n
 write double_inv_tb.raw
 .endc
 "}
-C {devices/vsource.sym} 380 -260 0 0 {name=V3 value="PULSE(0 1.8 0 1p 1p 12.5n 25n)" savecurrent=false}
+C {devices/vsource.sym} 380 -260 0 0 {name=V3 value="PULSE(0 1.8 0 10p 10p 125n 250n)" savecurrent=false}
 C {devices/gnd.sym} 380 -210 0 0 {name=l3 lab=GND}
 C {devices/lab_wire.sym} 380 -310 0 0 {name=p9 sig_type=std_logic lab=vin_buff
 }
+C {double_inverter.sym} 90 -800 0 0 {name=x3
+schematic=double_inverter_parax.sim
+spice_sym_def="tcleval(.include [file normalize ../mag/double_inverter.sim.spice])"
+tclcommand="textwindow [file normalize ../mag/double_inverter.sim.spice]"}
+C {devices/lab_wire.sym} 60 -800 0 0 {name=p10 sig_type=std_logic lab=vin_buff}
+C {devices/lab_wire.sym} 160 -880 0 0 {name=p11 sig_type=std_logic lab=VDD}
+C {devices/lab_wire.sym} 250 -800 0 1 {name=p12 sig_type=std_logic lab=out_buff_int_ext}
+C {devices/lab_wire.sym} 160 -710 0 0 {name=p13 sig_type=std_logic lab=VSS}
+C {pad_model.sym} 460 -800 0 0 {name=x4}
+C {devices/lab_wire.sym} 400 -710 0 0 {name=p14 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} 480 -800 0 1 {name=p15 sig_type=std_logic lab=out_buff_ext}

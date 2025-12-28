@@ -1,0 +1,95 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1765641297
+<< pwell >>
+rect 2300 -1000 2700 -700
+rect 3100 -1000 3500 -700
+rect 3900 -1000 4300 -700
+rect 2700 -1700 3100 -1400
+rect 3500 -1700 3900 -1400
+rect 4000 -2200 4200 -1000
+<< viali >>
+rect 4420 -1400 4480 -720
+<< metal1 >>
+rect 800 -1000 1100 -700
+rect 1500 -1000 1900 -700
+rect 2300 -1000 2700 -700
+rect 3100 -1000 3500 -700
+rect 3900 -1000 4300 -700
+rect 4400 -720 4600 -700
+rect 800 -2300 1000 -1000
+rect 1100 -1700 1500 -1400
+rect 1200 -2300 1400 -1700
+rect 1600 -2300 1800 -1000
+rect 1900 -1700 2300 -1400
+rect 2000 -2300 2200 -1700
+rect 2400 -2300 2600 -1000
+rect 2700 -1700 3100 -1400
+rect 2800 -2300 3000 -1700
+rect 3200 -2300 3400 -1000
+rect 3500 -1700 3900 -1400
+rect 3600 -2300 3800 -1700
+rect 4000 -2300 4200 -1000
+rect 4400 -1400 4420 -720
+rect 4480 -1400 4600 -720
+rect 4300 -1700 4600 -1400
+rect 4400 -2300 4600 -1700
+use sky130_fd_pr__res_high_po_0p35_DBWMSZ  XR0
+timestamp 1765640993
+transform 1 0 1101 0 1 -1168
+box -201 -732 201 732
+use sky130_fd_pr__res_high_po_0p35_DBWMSZ  XR1
+timestamp 1765640993
+transform 1 0 1501 0 1 -1168
+box -201 -732 201 732
+use sky130_fd_pr__res_high_po_0p35_DBWMSZ  XR2
+timestamp 1765640993
+transform 1 0 1901 0 1 -1168
+box -201 -732 201 732
+use sky130_fd_pr__res_high_po_0p35_DBWMSZ  XR3
+timestamp 1765640993
+transform 1 0 2301 0 1 -1168
+box -201 -732 201 732
+use sky130_fd_pr__res_high_po_0p35_DBWMSZ  XR4
+timestamp 1765640993
+transform 1 0 2701 0 1 -1168
+box -201 -732 201 732
+use sky130_fd_pr__res_high_po_0p35_DBWMSZ  XR5
+timestamp 1765640993
+transform 1 0 3101 0 1 -1168
+box -201 -732 201 732
+use sky130_fd_pr__res_high_po_0p35_DBWMSZ  XR6
+timestamp 1765640993
+transform 1 0 3501 0 1 -1168
+box -201 -732 201 732
+use sky130_fd_pr__res_high_po_0p35_DBWMSZ  XR7
+timestamp 1765640993
+transform 1 0 3901 0 1 -1168
+box -201 -732 201 732
+use sky130_fd_pr__res_high_po_0p35_DBWMSZ  XR8
+timestamp 1765640993
+transform 1 0 4301 0 1 -1168
+box -201 -732 201 732
+<< labels >>
+flabel metal1 1200 -2300 1400 -2100 0 FreeSans 256 0 0 0 vbg_1_6
+port 0 nsew
+flabel metal1 1600 -2300 1800 -2100 0 FreeSans 256 0 0 0 vbg_1_4
+port 1 nsew
+flabel metal1 2000 -2300 2200 -2100 0 FreeSans 256 0 0 0 vbg_1_2
+port 2 nsew
+flabel metal1 2400 -2300 2600 -2100 0 FreeSans 256 0 0 0 vbg_1_0
+port 3 nsew
+flabel metal1 2800 -2300 3000 -2100 0 FreeSans 256 0 0 0 vbg_0_8
+port 4 nsew
+flabel metal1 3200 -2300 3400 -2100 0 FreeSans 256 0 0 0 vbg_0_6
+port 5 nsew
+flabel metal1 3600 -2300 3800 -2100 0 FreeSans 256 0 0 0 vbg_0_4
+port 6 nsew
+flabel metal1 4000 -2300 4200 -2100 0 FreeSans 256 0 0 0 vbg_0_2
+port 7 nsew
+flabel metal1 800 -2300 1000 -2100 0 FreeSans 256 0 0 0 VDD
+port 8 nsew
+flabel metal1 4400 -2300 4600 -2100 0 FreeSans 256 0 0 0 VSS
+port 9 nsew
+<< end >>

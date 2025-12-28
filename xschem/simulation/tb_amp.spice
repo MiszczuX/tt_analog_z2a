@@ -1,0 +1,76 @@
+** sch_path: /home/ttuser/tt_analog_z2a/xschem/tb_amp.sch
+**.subckt tb_amp
+V1 VDD GND 1.8
+V2 VSS GND 0
+x1 VDD VSS AMP_OUT AMP_P vbg_0_4 vbg_1_2 amp
+x2 vbg_1_6 vbg_1_4 vbg_1_2 vbg_1_0 vbg_0_8 vbg_0_6 vbg_0_4 vbg_0_2 VDD VSS BG
+V3 AMP_P GND PULSE(0 1.8 0 1n 1n 125n 250n)
+**** begin user architecture code
+
+** opencircuitdesign pdks install
+.lib /home/ttuser/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+
+
+
+
+.control
+tran 10p 1n
+write tb_amp.raw
+.endc
+
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  amp.sym # of pins=6
+** sym_path: /home/ttuser/tt_analog_z2a/xschem/amp.sym
+** sch_path: /home/ttuser/tt_analog_z2a/xschem/amp.sch
+.subckt amp VDD VSS AMP_OUT AMP_P AMP_N NBIAS
+*.ipin AMP_P
+*.ipin AMP_N
+*.opin AMP_OUT
+*.ipin NBIAS
+*.iopin VDD
+*.iopin VSS
+XM6 VTAIL NBIAS VSS VSS sky130_fd_pr__nfet_01v8 L=0.3 W=1 nf=4 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM5 VFOLD VFOLD VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM8 AMP_OUT VFOLD VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM1 VFOLD AMP_P VTAIL VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 AMP_OUT AMP_N VTAIL VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  BG.sym # of pins=10
+** sym_path: /home/ttuser/tt_analog_z2a/xschem/BG.sym
+** sch_path: /home/ttuser/tt_analog_z2a/xschem/BG.sch
+.subckt BG vbg_1_6 vbg_1_4 vbg_1_2 vbg_1_0 vbg_0_8 vbg_0_6 vbg_0_4 vbg_0_2 VDD VSS
+*.opin vbg_1_6
+*.opin vbg_1_4
+*.opin vbg_1_2
+*.opin vbg_1_0
+*.opin vbg_0_8
+*.opin vbg_0_6
+*.opin vbg_0_4
+*.opin vbg_0_2
+*.iopin VDD
+*.iopin VSS
+XR1 vbg_1_4 vbg_1_6 VSS sky130_fd_pr__res_high_po_0p35 L=1.5 mult=1 m=1
+XR0 vbg_1_6 VDD VSS sky130_fd_pr__res_high_po_0p35 L=1.5 mult=1 m=1
+XR3 vbg_1_0 vbg_1_2 VSS sky130_fd_pr__res_high_po_0p35 L=1.5 mult=1 m=1
+XR2 vbg_1_2 vbg_1_4 VSS sky130_fd_pr__res_high_po_0p35 L=1.5 mult=1 m=1
+XR5 vbg_0_6 vbg_0_8 VSS sky130_fd_pr__res_high_po_0p35 L=1.5 mult=1 m=1
+XR4 vbg_0_8 vbg_1_0 VSS sky130_fd_pr__res_high_po_0p35 L=1.5 mult=1 m=1
+XR6 vbg_0_4 vbg_0_6 VSS sky130_fd_pr__res_high_po_0p35 L=1.5 mult=1 m=1
+XR7 vbg_0_2 vbg_0_4 VSS sky130_fd_pr__res_high_po_0p35 L=1.5 mult=1 m=1
+XR8 VSS vbg_0_2 VSS sky130_fd_pr__res_high_po_0p35 L=1.5 mult=1 m=1
+.ends
+
+.GLOBAL GND
+.end

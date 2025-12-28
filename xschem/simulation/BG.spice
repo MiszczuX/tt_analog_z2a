@@ -1,0 +1,14 @@
+** sch_path: /home/ttuser/tt_analog_z2a/xschem/BG.sch
+.subckt BG vbg_1_6 vbg_1_4 vbg_1_2 vbg_1_0 vbg_0_8 vbg_0_6 vbg_0_4 vbg_0_2 VDD VSS
+*.PININFO vbg_1_6:O vbg_1_4:O vbg_1_2:O vbg_1_0:O vbg_0_8:O vbg_0_6:O vbg_0_4:O vbg_0_2:O VDD:B VSS:B
+XR1 vbg_1_4 vbg_1_6 VSS sky130_fd_pr__res_high_po_0p35 L=1.5 mult=1 m=1
+XR0 vbg_1_6 VDD VSS sky130_fd_pr__res_high_po_0p35 L=1.5 mult=1 m=1
+XR3 vbg_1_0 vbg_1_2 VSS sky130_fd_pr__res_high_po_0p35 L=1.5 mult=1 m=1
+XR2 vbg_1_2 vbg_1_4 VSS sky130_fd_pr__res_high_po_0p35 L=1.5 mult=1 m=1
+XR5 vbg_0_6 vbg_0_8 VSS sky130_fd_pr__res_high_po_0p35 L=1.5 mult=1 m=1
+XR4 vbg_0_8 vbg_1_0 VSS sky130_fd_pr__res_high_po_0p35 L=1.5 mult=1 m=1
+XR6 vbg_0_4 vbg_0_6 VSS sky130_fd_pr__res_high_po_0p35 L=1.5 mult=1 m=1
+XR7 vbg_0_2 vbg_0_4 VSS sky130_fd_pr__res_high_po_0p35 L=1.5 mult=1 m=1
+XR8 VSS vbg_0_2 VSS sky130_fd_pr__res_high_po_0p35 L=1.5 mult=1 m=1
+.ends
+.end
