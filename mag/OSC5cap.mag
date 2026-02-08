@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1769636617
+timestamp 1770560933
 << viali >>
 rect 2400 -1480 2480 -1160
 rect 4720 -1480 4800 -1160
@@ -122,39 +122,39 @@ rect 11800 -1180 11820 -1020
 rect 12180 -1180 12200 -1020
 rect 11800 -1200 12200 -1180
 use sky130_fd_pr__nfet_01v8_QXQT3M  sky130_fd_pr__nfet_01v8_QXQT3M_0 ~/tt_analog_z2a_2/mag
-timestamp 1769633536
+timestamp 1770560933
 transform 1 0 11997 0 1 -1320
 box -1196 -279 1196 279
 use inv_x4  x22 ~/tt_analog_z2a_2/mag
-timestamp 1769635883
+timestamp 1770560933
 transform 1 0 0 0 1 400
 box 800 -1200 3600 800
 use inv_x4  x23
-timestamp 1769635883
+timestamp 1770560933
 transform 1 0 2800 0 1 400
 box 800 -1200 3600 800
 use inv_x4  x24
-timestamp 1769635883
+timestamp 1770560933
 transform 1 0 5600 0 1 400
 box 800 -1200 3600 800
 use inv_x4  x25
-timestamp 1769635883
+timestamp 1770560933
 transform 1 0 8400 0 1 400
 box 800 -1200 3600 800
 use inv_x4  x26
-timestamp 1769635883
+timestamp 1770560933
 transform 1 0 11200 0 1 400
 box 800 -1200 3600 800
 use sky130_fd_pr__nfet_01v8_QXQT3M  XM1
-timestamp 1769633536
+timestamp 1770560933
 transform 1 0 6397 0 1 -1320
 box -1196 -279 1196 279
 use sky130_fd_pr__nfet_01v8_QXQT3M  XM2
-timestamp 1769633536
+timestamp 1770560933
 transform 1 0 9197 0 1 -1320
 box -1196 -279 1196 279
 use sky130_fd_pr__nfet_01v8_QXQT3M  XM5
-timestamp 1769633536
+timestamp 1770560933
 transform 1 0 3597 0 1 -1320
 box -1196 -279 1196 279
 << labels >>

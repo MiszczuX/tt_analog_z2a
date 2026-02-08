@@ -1,6 +1,15 @@
 magic
 tech sky130A
-timestamp 1769869012
+timestamp 1770560933
+<< error_s >>
+rect 2000 1600 2028 1628
+rect 4500 1600 4528 1628
+rect 1972 1572 2000 1600
+rect 4472 1572 4500 1600
+rect 1972 -2100 2000 -2072
+rect 4472 -2100 4500 -2072
+rect 2000 -2128 2028 -2100
+rect 4500 -2128 4528 -2100
 << metal1 >>
 rect 6000 11100 6500 11200
 rect 300 10800 800 10900
@@ -1340,71 +1349,71 @@ rect 1600 -5880 1620 -5530
 rect 2570 -5880 2600 -5530
 rect 1600 -5900 2600 -5880
 use pdiscr  x0
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 600 0 1 8500
 box 400 -1500 2500 2000
 use pdiscr  x1
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 2800 0 1 8500
 box 400 -1500 2500 2000
 use pdiscr  x2
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 600 0 -1 5500
 box 400 -1500 2500 2000
 use pdiscr  x3
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 2800 0 -1 5500
 box 400 -1500 2500 2000
 use ndiscr  x4
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 800 0 1 600
 box 200 -800 2000 2800
 use ndiscr  x5
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 3300 0 1 600
 box 200 -800 2000 2800
 use ndiscr  x6
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 800 0 -1 -1100
 box 200 -800 2000 2800
 use ndiscr  x7
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 3300 0 -1 -1100
 box 200 -800 2000 2800
 use LOGIC  x8
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 9100 0 1 8100
 box -3100 -11100 4000 1900
 use PASSGATE  x9
-timestamp 1769202985
+timestamp 1770560933
 transform 1 0 11100 0 1 5800
 box 200 -800 1619 911
 use PASSGATE  x10
-timestamp 1769202985
+timestamp 1770560933
 transform 1 0 11100 0 1 3100
 box 200 -800 1619 911
 use PASSGATE  x11
-timestamp 1769202985
+timestamp 1770560933
 transform 1 0 11100 0 1 400
 box 200 -800 1619 911
 use PASSGATE  x12
-timestamp 1769202985
+timestamp 1770560933
 transform 1 0 11100 0 1 -2300
 box 200 -800 1619 911
 use PASSGATE  x13
-timestamp 1769202985
+timestamp 1770560933
 transform 1 0 5300 0 1 -4700
 box 200 -800 1619 911
 use PASSGATE  x14
-timestamp 1769202985
+timestamp 1770560933
 transform 1 0 7300 0 1 -4700
 box 200 -800 1619 911
 use PASSGATE  x15
-timestamp 1769202985
+timestamp 1770560933
 transform 1 0 9300 0 1 -4700
 box 200 -800 1619 911
 use PASSGATE  x16
-timestamp 1769202985
+timestamp 1770560933
 transform 1 0 11100 0 1 -4700
 box 200 -800 1619 911
 << labels >>

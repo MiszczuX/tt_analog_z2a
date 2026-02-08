@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1769863106
+timestamp 1770560933
 << error_s >>
 rect 6440 -1640 6449 -1631
 rect 6771 -1640 6780 -1631
@@ -59,23 +59,23 @@ rect 3400 -2400 3600 -2380
 << via2 >>
 rect 6440 -2560 6780 -1640
 use NAND2  x1
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 3600 0 -1 -2200
 box -200 -1200 1200 1800
 use NAND2  x2
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 5200 0 -1 -2200
 box -200 -1200 1200 1800
 use NAND2  x3
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 3600 0 1 200
 box -200 -1200 1200 1800
 use NAND2  x4
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 5200 0 1 200
 box -200 -1200 1200 1800
 use inv_x4  x24 ~/tt_analog_z2a_2/mag
-timestamp 1769635883
+timestamp 1770560933
 transform 0 -1 1600 -1 0 400
 box 800 -1200 3600 800
 << labels >>

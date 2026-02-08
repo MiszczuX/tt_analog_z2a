@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1769862601
+timestamp 1770560933
 << nwell >>
 rect 800 -4300 1300 400
 rect 800 -4400 1100 -4300
@@ -352,67 +352,67 @@ rect 880 -4220 900 -4080
 rect 960 -4220 980 -4080
 rect 880 -4240 980 -4220
 use sky130_fd_pr__nfet_01v8_64Z3AY  sky130_fd_pr__nfet_01v8_64Z3AY_0 ~/tt_analog_z2a_2/mag
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 511 0 1 79
 box -211 -279 211 279
 use sky130_fd_pr__pfet_01v8_MGS3BN  sky130_fd_pr__pfet_01v8_MGS3BN_0
-timestamp 1769202985
+timestamp 1770560933
 transform 1 0 1011 0 1 -516
 box -211 -284 211 284
 use sky130_fd_pr__nfet_01v8_64Z3AY  XM0
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 511 0 1 -4121
 box -211 -279 211 279
 use sky130_fd_pr__nfet_01v8_64Z3AY  XM1
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 511 0 1 -3521
 box -211 -279 211 279
 use sky130_fd_pr__nfet_01v8_64Z3AY  XM2
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 511 0 1 -2921
 box -211 -279 211 279
 use sky130_fd_pr__nfet_01v8_64Z3AY  XM3
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 511 0 1 -2321
 box -211 -279 211 279
 use sky130_fd_pr__nfet_01v8_64Z3AY  XM4
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 511 0 1 -1721
 box -211 -279 211 279
 use sky130_fd_pr__nfet_01v8_64Z3AY  XM5
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 511 0 1 -1121
 box -211 -279 211 279
 use sky130_fd_pr__nfet_01v8_64Z3AY  XM6
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 511 0 1 -521
 box -211 -279 211 279
 use sky130_fd_pr__pfet_01v8_MGS3BN  XM8
-timestamp 1769202985
+timestamp 1770560933
 transform 1 0 1011 0 1 84
 box -211 -284 211 284
 use sky130_fd_pr__pfet_01v8_MGS3BN  XM10
-timestamp 1769202985
+timestamp 1770560933
 transform 1 0 1011 0 1 -1116
 box -211 -284 211 284
 use sky130_fd_pr__pfet_01v8_MGS3BN  XM11
-timestamp 1769202985
+timestamp 1770560933
 transform 1 0 1011 0 1 -1716
 box -211 -284 211 284
 use sky130_fd_pr__pfet_01v8_MGS3BN  XM12
-timestamp 1769202985
+timestamp 1770560933
 transform 1 0 1011 0 1 -2316
 box -211 -284 211 284
 use sky130_fd_pr__pfet_01v8_MGS3BN  XM13
-timestamp 1769202985
+timestamp 1770560933
 transform 1 0 1011 0 1 -2916
 box -211 -284 211 284
 use sky130_fd_pr__pfet_01v8_MGS3BN  XM14
-timestamp 1769202985
+timestamp 1770560933
 transform 1 0 1011 0 1 -3516
 box -211 -284 211 284
 use sky130_fd_pr__pfet_01v8_MGS3BN  XM15
-timestamp 1769202985
+timestamp 1770560933
 transform 1 0 1011 0 1 -4116
 box -211 -284 211 284
 << labels >>

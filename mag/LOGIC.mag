@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1769862601
+timestamp 1770560933
 << metal1 >>
 rect -2900 1700 -700 1800
 rect -2900 -350 -2500 1700
@@ -558,39 +558,39 @@ rect 340 -10840 700 -10760
 rect 300 -10850 700 -10840
 rect -2900 -11100 -2500 -11050
 use AND  x1
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 450 0 1 -750
 box 50 -2250 1550 450
 use AND  x2
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 450 0 -1 -5250
 box 50 -2250 1550 450
 use AND  x3
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 450 0 1 -6150
 box 50 -2250 1550 450
 use AND  x4
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 450 0 -1 -10650
 box 50 -2250 1550 450
 use AND  x5
-timestamp 1769862601
+timestamp 1770560933
 transform -1 0 -1450 0 1 -750
 box 50 -2250 1550 450
 use AND  x6
-timestamp 1769862601
+timestamp 1770560933
 transform -1 0 -1450 0 -1 -5250
 box 50 -2250 1550 450
 use AND  x7
-timestamp 1769862601
+timestamp 1770560933
 transform -1 0 -1450 0 1 -6150
 box 50 -2250 1550 450
 use AND  x8
-timestamp 1769862601
+timestamp 1770560933
 transform -1 0 -1450 0 -1 -10650
 box 50 -2250 1550 450
 use LOGIC_INV  x9
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 -1000 0 1 4600
 box -200 -4850 4300 -2700
 << labels >>

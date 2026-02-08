@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1769856845
+timestamp 1770560933
 << pwell >>
 rect 2300 -1000 2700 -700
 rect 3100 -1000 3500 -700
@@ -35,39 +35,39 @@ rect 4400 -1400 4420 -720
 rect 4480 -1400 4800 -720
 rect 4300 -1900 4800 -1400
 use sky130_fd_pr__res_high_po_0p35_DBWMSZ  XR0
-timestamp 1769854229
+timestamp 1770560933
 transform 1 0 1101 0 1 -1168
 box -201 -732 201 732
 use sky130_fd_pr__res_high_po_0p35_DBWMSZ  XR1
-timestamp 1769854229
+timestamp 1770560933
 transform 1 0 1501 0 1 -1168
 box -201 -732 201 732
 use sky130_fd_pr__res_high_po_0p35_DBWMSZ  XR2
-timestamp 1769854229
+timestamp 1770560933
 transform 1 0 1901 0 1 -1168
 box -201 -732 201 732
 use sky130_fd_pr__res_high_po_0p35_DBWMSZ  XR3
-timestamp 1769854229
+timestamp 1770560933
 transform 1 0 2301 0 1 -1168
 box -201 -732 201 732
 use sky130_fd_pr__res_high_po_0p35_DBWMSZ  XR4
-timestamp 1769854229
+timestamp 1770560933
 transform 1 0 2701 0 1 -1168
 box -201 -732 201 732
 use sky130_fd_pr__res_high_po_0p35_DBWMSZ  XR5
-timestamp 1769854229
+timestamp 1770560933
 transform 1 0 3101 0 1 -1168
 box -201 -732 201 732
 use sky130_fd_pr__res_high_po_0p35_DBWMSZ  XR6
-timestamp 1769854229
+timestamp 1770560933
 transform 1 0 3501 0 1 -1168
 box -201 -732 201 732
 use sky130_fd_pr__res_high_po_0p35_DBWMSZ  XR7
-timestamp 1769854229
+timestamp 1770560933
 transform 1 0 3901 0 1 -1168
 box -201 -732 201 732
 use sky130_fd_pr__res_high_po_0p35_DBWMSZ  XR8
-timestamp 1769854229
+timestamp 1770560933
 transform 1 0 4301 0 1 -1168
 box -201 -732 201 732
 << labels >>

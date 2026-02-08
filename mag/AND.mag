@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1769862601
+timestamp 1770560933
 << metal1 >>
 rect 50 440 150 450
 rect 50 360 60 440
@@ -90,11 +90,11 @@ rect 50 -2240 60 -2160
 rect 240 -2240 250 -2160
 rect 50 -2250 250 -2240
 use NAND  x5
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 150 0 1 50
 box 0 -2300 900 400
 use inv_x1  x28 ~/tt_analog_z2a_2/mag
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 950 0 1 -650
 box 100 -700 500 200
 << labels >>

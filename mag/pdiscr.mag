@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1769862601
+timestamp 1770560933
 << metal1 >>
 rect 400 1900 700 2000
 rect 1000 1800 2300 2000
@@ -15,15 +15,15 @@ rect 1600 -1400 2300 -500
 rect 400 -1500 500 -1400
 rect 1200 -1500 2300 -1400
 use amp_p  x5
-timestamp 1769859645
+timestamp 1770560933
 transform 1 0 200 0 1 200
 box 300 -1700 1300 1800
 use inv_x1  x6 ~/tt_analog_z2a_2/mag
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 1500 0 1 100
 box 100 -700 500 200
 use inv_x1  x7
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 1900 0 1 100
 box 100 -700 500 200
 << labels >>

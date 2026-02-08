@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1769862601
+timestamp 1770560933
 << metal1 >>
 rect 200 -2900 3900 -2800
 rect 200 -3300 300 -3200
@@ -313,35 +313,35 @@ rect 500 -4740 510 -4710
 rect 540 -4740 550 -4710
 rect 500 -4750 550 -4740
 use inv_x1  x1 ~/tt_analog_z2a_2/mag
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 200 0 1 -3000
 box 100 -700 500 200
 use inv_x1  x2
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 700 0 1 -3000
 box 100 -700 500 200
 use inv_x1  x3
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 1200 0 1 -3000
 box 100 -700 500 200
 use inv_x1  x4
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 1700 0 1 -3000
 box 100 -700 500 200
 use inv_x1  x5
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 2200 0 1 -3000
 box 100 -700 500 200
 use inv_x1  x6
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 2700 0 1 -3000
 box 100 -700 500 200
 use inv_x1  x7
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 3200 0 1 -3000
 box 100 -700 500 200
 use inv_x1  x28
-timestamp 1769862601
+timestamp 1770560933
 transform 1 0 3700 0 1 -3000
 box 100 -700 500 200
 << labels >>
