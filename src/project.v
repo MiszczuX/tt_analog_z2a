@@ -5,7 +5,7 @@
 
 `default_nettype none
 
-module tt_um_jm_double_inverter (
+module tt_yen (
     input  wire       VGND,
     input  wire       VDPWR,    // 1.8v power supply
 //    input  wire       VAPWR,    // 3.3v power supply
@@ -20,11 +20,11 @@ module tt_um_jm_double_inverter (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-	double_inverter double_inverter(
+	yen_top yen_top(
 	.VDD(VDPWR),
 	.VSS(VGND),
-	.out_amp_inv(ua[0]),
-	.in_inv_amp(ua[1])
+	.VCMUXOUT(ua[0]),
+	.VCMUXIN(ua[1])
 	);
 	
 	assign uo_out[0] = VGND;

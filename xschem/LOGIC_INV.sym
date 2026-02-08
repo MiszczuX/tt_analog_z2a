@@ -1,0 +1,70 @@
+v {xschem version=3.4.5 file_version=1.2
+}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -130 -80 130 -80 {}
+L 4 -130 80 130 80 {}
+L 4 -130 -80 -130 80 {}
+L 4 130 -80 130 80 {}
+L 4 -150 -70 -130 -70 {}
+L 4 130 -70 150 -70 {}
+L 4 130 -50 150 -50 {}
+L 4 -150 -50 -130 -50 {}
+L 4 -150 -30 -130 -30 {}
+L 4 130 -30 150 -30 {}
+L 4 -150 -10 -130 -10 {}
+L 4 130 -10 150 -10 {}
+L 4 130 10 150 10 {}
+L 4 -150 10 -130 10 {}
+L 4 130 30 150 30 {}
+L 4 -150 30 -130 30 {}
+L 4 -150 50 -130 50 {}
+L 4 130 50 150 50 {}
+L 4 -150 70 -130 70 {}
+L 4 130 70 150 70 {}
+L 7 -20 -100 -20 -80 {}
+L 7 0 -100 0 -80 {}
+B 5 -152.5 -72.5 -147.5 -67.5 {name=LOGICIN_1_6 sig_type=std_logic dir=in}
+B 5 147.5 -72.5 152.5 -67.5 {name=Z_LOGICIN_1_6 sig_type=std_logic dir=out}
+B 5 147.5 -52.5 152.5 -47.5 {name=Z_LOGICIN_1_4 sig_type=std_logic dir=out}
+B 5 -152.5 -52.5 -147.5 -47.5 {name=LOGICIN_1_4 sig_type=std_logic dir=in}
+B 5 -152.5 -32.5 -147.5 -27.5 {name=LOGICIN_1_2 sig_type=std_logic dir=in}
+B 5 147.5 -32.5 152.5 -27.5 {name=Z_LOGICIN_1_2 sig_type=std_logic dir=out}
+B 5 -152.5 -12.5 -147.5 -7.5 {name=LOGICIN_1_0 sig_type=std_logic dir=in}
+B 5 147.5 -12.5 152.5 -7.5 {name=Z_LOGICIN_1_0 sig_type=std_logic dir=out}
+B 5 147.5 7.5 152.5 12.5 {name=Z_LOGICIN_0_8 sig_type=std_logic dir=out}
+B 5 -152.5 7.5 -147.5 12.5 {name=LOGICIN_0_8 sig_type=std_logic dir=in}
+B 5 147.5 27.5 152.5 32.5 {name=Z_LOGICIN_0_6 sig_type=std_logic dir=out}
+B 5 -152.5 27.5 -147.5 32.5 {name=LOGICIN_0_6 sig_type=std_logic dir=in}
+B 5 -152.5 47.5 -147.5 52.5 {name=LOGICIN_0_4 sig_type=std_logic dir=in}
+B 5 147.5 47.5 152.5 52.5 {name=Z_LOGICIN_0_4 sig_type=std_logic dir=out}
+B 5 -152.5 67.5 -147.5 72.5 {name=LOGICIN_0_2 sig_type=std_logic dir=in}
+B 5 147.5 67.5 152.5 72.5 {name=Z_LOGICIN_0_2 sig_type=std_logic dir=out}
+B 5 -22.5 -102.5 -17.5 -97.5 {name=VDD dir=inout}
+B 5 -2.5 -102.5 2.5 -97.5 {name=VSS dir=inout}
+T {@symname} -58.5 -6 0 0 0.3 0.3 {}
+T {@name} 135 -92 0 0 0.2 0.2 {}
+T {LOGICIN_1_6} -125 -74 0 0 0.2 0.2 {}
+T {Z_LOGICIN_1_6} 125 -74 0 1 0.2 0.2 {}
+T {Z_LOGICIN_1_4} 125 -54 0 1 0.2 0.2 {}
+T {LOGICIN_1_4} -125 -54 0 0 0.2 0.2 {}
+T {LOGICIN_1_2} -125 -34 0 0 0.2 0.2 {}
+T {Z_LOGICIN_1_2} 125 -34 0 1 0.2 0.2 {}
+T {LOGICIN_1_0} -125 -14 0 0 0.2 0.2 {}
+T {Z_LOGICIN_1_0} 125 -14 0 1 0.2 0.2 {}
+T {Z_LOGICIN_0_8} 125 6 0 1 0.2 0.2 {}
+T {LOGICIN_0_8} -125 6 0 0 0.2 0.2 {}
+T {Z_LOGICIN_0_6} 125 26 0 1 0.2 0.2 {}
+T {LOGICIN_0_6} -125 26 0 0 0.2 0.2 {}
+T {LOGICIN_0_4} -125 46 0 0 0.2 0.2 {}
+T {Z_LOGICIN_0_4} 125 46 0 1 0.2 0.2 {}
+T {LOGICIN_0_2} -125 66 0 0 0.2 0.2 {}
+T {Z_LOGICIN_0_2} 125 66 0 1 0.2 0.2 {}
+T {VDD} -25 -84 1 1 0.2 0.2 {}
+T {VSS} -5 -84 1 1 0.2 0.2 {}

@@ -1,0 +1,31 @@
+v {xschem version=3.4.5 file_version=1.2
+}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -140 -40 60 -40 {}
+L 4 -140 -40 -140 40 {}
+L 4 -160 -30 -140 -30 {}
+L 4 60 -40 60 40 {}
+L 4 -140 40 60 40 {}
+L 7 -40 -60 -40 -40 {}
+L 7 -160 0 -140 0 {}
+L 7 -60 -60 -60 -40 {}
+L 7 60 0 80 0 {}
+B 5 -62.5 -62.5 -57.5 -57.5 {name=VDD dir=inout}
+B 5 -162.5 -2.5 -157.5 2.5 {name=PASS_GATE_IN sig_type=std_logic dir=inout}
+B 5 -42.5 -62.5 -37.5 -57.5 {name=VSS dir=inout}
+B 5 -162.5 -32.5 -157.5 -27.5 {name=PASS_GATE_EN sig_type=std_logic dir=in}
+B 5 77.5 -2.5 82.5 2.5 {name=PASS_GATE_OUT sig_type=std_logic dir=inout}
+T {@symname} -34 14 0 0 0.3 0.3 {}
+T {@name} -25 -32 0 0 0.2 0.2 {}
+T {VDD} -65 -44 1 1 0.2 0.2 {}
+T {PASS_GATE_IN} -135 -4 0 0 0.2 0.2 {}
+T {VSS} -45 -44 1 1 0.2 0.2 {}
+T {PASS_GATE_EN} -135 -34 0 0 0.2 0.2 {}
+T {PASS_GATE_OUT} 55 -4 0 1 0.2 0.2 {}

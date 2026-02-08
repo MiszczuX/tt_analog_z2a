@@ -1,0 +1,31 @@
+** sch_path: /home/ttuser/tt_analog_z2a/xschem/ndiscr.sch
+.subckt ndiscr VDD VSS DISCR_BIAS DISCR_IN DISCR_OUT DISCR_VREF
+*.PININFO VDD:B VSS:B DISCR_IN:I DISCR_VREF:I DISCR_OUT:O DISCR_BIAS:B
+x6 VDD VSS net2 net1 inv_x1
+x7 VDD VSS DISCR_OUT net2 inv_x1
+x17 VDD VSS net1 DISCR_IN DISCR_VREF DISCR_BIAS amp
+.ends
+
+* expanding   symbol:  inv_x1.sym # of pins=4
+** sym_path: /home/ttuser/tt_analog_z2a/xschem/inv_x1.sym
+** sch_path: /home/ttuser/tt_analog_z2a/xschem/inv_x1.sch
+.subckt inv_x1 VDD VSS INV_OUT INV_IN
+*.PININFO INV_IN:I INV_OUT:O VDD:B VSS:B
+XM3 INV_OUT INV_IN VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
+XM5 INV_OUT INV_IN VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  amp.sym # of pins=6
+** sym_path: /home/ttuser/tt_analog_z2a/xschem/amp.sym
+** sch_path: /home/ttuser/tt_analog_z2a/xschem/amp.sch
+.subckt amp VDD VSS AMP_OUT AMP_P AMP_N NBIAS
+*.PININFO AMP_P:I AMP_N:I AMP_OUT:O NBIAS:I VDD:B VSS:B
+XM3 VFOLD VFOLD VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=10 nf=1 m=1
+XM4 AMP_OUT AMP_N VTAIL VSS sky130_fd_pr__nfet_01v8 L=0.15 W=10 nf=1 m=1
+XM1 AMP_OUT VFOLD VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=10 nf=1 m=1
+XM5 VFOLD AMP_P VTAIL VSS sky130_fd_pr__nfet_01v8 L=0.15 W=10 nf=1 m=1
+XM2 VTAIL NBIAS VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=4
+.ends
+
+.end

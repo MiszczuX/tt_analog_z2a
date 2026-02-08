@@ -1,0 +1,10 @@
+** sch_path: /home/ttuser/tt_analog_z2a_2/xschem/amp.sch
+.subckt amp VDD VSS AMP_OUT AMP_P AMP_N NBIAS
+*.PININFO AMP_P:I AMP_N:I AMP_OUT:O NBIAS:I VDD:B VSS:B
+XM3 VFOLD VFOLD VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=10 nf=1 m=1
+XM4 AMP_OUT AMP_N VTAIL VSS sky130_fd_pr__nfet_01v8 L=0.15 W=10 nf=1 m=1
+XM1 AMP_OUT VFOLD VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=10 nf=1 m=1
+XM5 VFOLD AMP_P VTAIL VSS sky130_fd_pr__nfet_01v8 L=0.15 W=10 nf=1 m=1
+XM2 VTAIL NBIAS VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=4 nf=1 m=1
+.ends
+.end

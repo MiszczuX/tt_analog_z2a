@@ -80,9 +80,9 @@ C {devices/lab_wire.sym} 230 -40 0 0 {name=p7 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 230 -280 0 0 {name=p8 sig_type=std_logic lab=VDD}
 C {sky130_fd_pr/pfet_01v8.sym} 210 -430 0 0 {name=M1
 L=1
-W=1
+W=8
 nf=1
-mult=8
+mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 

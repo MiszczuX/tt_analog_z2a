@@ -1,0 +1,92 @@
+** sch_path: /home/ttuser/tt_analog_z2a/xschem/logictest.sch
+.subckt logictest LOGICOUT_0_2 LOGICIN_1_0 LOGICIN_1_2 LOGICIN_1_4 LOGICIN_1_6 LOGICIN_0_2 LOGICIN_0_4 LOGICIN_0_6 LOGICIN_0_8 VDD
++ VSS
+*.PININFO LOGICOUT_0_2:O LOGICIN_1_0:I LOGICIN_1_2:I LOGICIN_1_4:I LOGICIN_1_6:I LOGICIN_0_2:I LOGICIN_0_4:I LOGICIN_0_6:I
+*+ LOGICIN_0_8:I VDD:B VSS:B
+x1 VDD VSS Z_LOGICIN_1_6 Z_LOGICIN_1_4 Z_LOGICIN_1_2 Z_LOGICIN_1_0 LOGICOUT_0_2 Z_LOGICIN_0_8 Z_LOGICIN_0_6 Z_LOGICIN_0_4
++ LOGICIN_0_2 AND
+x9 LOGICIN_1_6 Z_LOGICIN_1_6 Z_LOGICIN_1_4 LOGICIN_1_4 LOGICIN_1_2 Z_LOGICIN_1_2 LOGICIN_1_0 Z_LOGICIN_1_0 Z_LOGICIN_0_8
++ LOGICIN_0_8 Z_LOGICIN_0_6 LOGICIN_0_6 LOGICIN_0_4 Z_LOGICIN_0_4 LOGICIN_0_2 Z_LOGICIN_0_2 VDD VSS LOGIC_INV
+.ends
+
+* expanding   symbol:  AND.sym # of pins=11
+** sym_path: /home/ttuser/tt_analog_z2a/xschem/AND.sym
+** sch_path: /home/ttuser/tt_analog_z2a/xschem/AND.sch
+.subckt AND VDD VSS AND_IN_1_6 AND_IN_1_4 AND_IN_1_2 AND_IN_1_0 AND_OUT AND_IN_0_8 AND_IN_0_6 AND_IN_0_4 AND_IN_0_2
+*.PININFO VDD:B VSS:B AND_IN_0_2:I AND_OUT:O AND_IN_0_4:I AND_IN_0_6:I AND_IN_0_8:I AND_IN_1_0:I AND_IN_1_2:I AND_IN_1_4:I
+*+ AND_IN_1_6:I
+x5 NANDOUT AND_IN_1_6 VDD AND_IN_1_4 VSS AND_IN_1_2 AND_IN_1_0 AND_IN_0_8 AND_IN_0_6 AND_IN_0_4 AND_IN_0_2 NAND
+x28 VDD VSS AND_OUT NANDOUT inv_x1
+.ends
+
+
+* expanding   symbol:  LOGIC_INV.sym # of pins=18
+** sym_path: /home/ttuser/tt_analog_z2a/xschem/LOGIC_INV.sym
+** sch_path: /home/ttuser/tt_analog_z2a/xschem/LOGIC_INV.sch
+.subckt LOGIC_INV LOGICIN_1_6 Z_LOGICIN_1_6 Z_LOGICIN_1_4 LOGICIN_1_4 LOGICIN_1_2 Z_LOGICIN_1_2 LOGICIN_1_0 Z_LOGICIN_1_0
++ Z_LOGICIN_0_8 LOGICIN_0_8 Z_LOGICIN_0_6 LOGICIN_0_6 LOGICIN_0_4 Z_LOGICIN_0_4 LOGICIN_0_2 Z_LOGICIN_0_2 VDD VSS
+*.PININFO Z_LOGICIN_0_2:O LOGICIN_0_2:I LOGICIN_0_4:I LOGICIN_0_6:I LOGICIN_0_8:I LOGICIN_1_0:I LOGICIN_1_2:I LOGICIN_1_4:I
+*+ LOGICIN_1_6:I Z_LOGICIN_0_4:O Z_LOGICIN_0_6:O Z_LOGICIN_0_8:O Z_LOGICIN_1_0:O Z_LOGICIN_1_2:O Z_LOGICIN_1_4:O Z_LOGICIN_1_6:O VDD:B VSS:B
+x28 VDD VSS Z_LOGICIN_0_2 LOGICIN_0_2 inv_x1
+x1 VDD VSS Z_LOGICIN_0_4 LOGICIN_0_4 inv_x1
+x2 VDD VSS Z_LOGICIN_0_6 LOGICIN_0_6 inv_x1
+x3 VDD VSS Z_LOGICIN_0_8 LOGICIN_0_8 inv_x1
+x4 VDD VSS Z_LOGICIN_1_0 LOGICIN_1_0 inv_x1
+x5 VDD VSS Z_LOGICIN_1_2 LOGICIN_1_2 inv_x1
+x6 VDD VSS Z_LOGICIN_1_4 LOGICIN_1_4 inv_x1
+x7 VDD VSS Z_LOGICIN_1_6 LOGICIN_1_6 inv_x1
+.ends
+
+
+* expanding   symbol:  NAND.sym # of pins=11
+** sym_path: /home/ttuser/tt_analog_z2a/xschem/NAND.sym
+** sch_path: /home/ttuser/tt_analog_z2a/xschem/NAND.sch
+.subckt NAND NAND_OUT NAND_IN_7 VDD NAND_IN_6 VSS NAND_IN_5 NAND_IN_4 NAND_IN_3 NAND_IN_2 NAND_IN_1 NAND_IN_0
+*.PININFO NAND_IN_0:I NAND_OUT:O VDD:B VSS:B NAND_IN_1:I NAND_IN_2:I NAND_IN_3:I NAND_IN_4:I NAND_IN_5:I NAND_IN_6:I NAND_IN_7:I
+XM15 NAND_OUT NAND_IN_0 VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM0 net1 NAND_IN_0 VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM1 net2 NAND_IN_1 net1 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 net3 NAND_IN_2 net2 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM3 net4 NAND_IN_3 net3 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM4 net5 NAND_IN_4 net4 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM5 net6 NAND_IN_5 net5 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM6 net7 NAND_IN_6 net6 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM7 NAND_OUT NAND_IN_7 net7 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM8 NAND_OUT NAND_IN_1 VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM9 NAND_OUT NAND_IN_2 VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM10 NAND_OUT NAND_IN_3 VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM11 NAND_OUT NAND_IN_4 VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM12 NAND_OUT NAND_IN_5 VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM13 NAND_OUT NAND_IN_6 VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM14 NAND_OUT NAND_IN_7 VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  inv_x1.sym # of pins=4
+** sym_path: /home/ttuser/tt_analog_z2a/xschem/inv_x1.sym
+** sch_path: /home/ttuser/tt_analog_z2a/xschem/inv_x1.sch
+.subckt inv_x1 VDD VSS INV_OUT INV_IN
+*.PININFO INV_IN:I INV_OUT:O VDD:B VSS:B
+XM3 INV_OUT INV_IN VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM5 INV_OUT INV_IN VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.end

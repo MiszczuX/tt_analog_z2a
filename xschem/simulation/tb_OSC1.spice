@@ -1,0 +1,92 @@
+** sch_path: /home/ttuser/tt_analog_z2a/xschem/tb_OSC1.sch
+**.subckt tb_OSC1
+V1 VDD GND 1.8
+V2 VSS GND 0
+x4 VSS VCMUX_PINOUT VCMUX_OUT pad_model
+x1 VDD inv_osc VSS VDD VCMUX_OUT PASSGATE
+x2 VDD VSS net1 net3 inv_x4
+x3 VDD VSS net2 net1 inv_x4
+x5 VDD VSS inv_osc net2 inv_x4
+x6 VDD VSS net3 net4 inv_x4
+x7 VDD VSS net4 inv_osc inv_x4
+XC1 net1 VSS sky130_fd_pr__cap_mim_m3_1 W=100 L=100 MF=1 m=1
+**** begin user architecture code
+
+** opencircuitdesign pdks install
+.lib /home/ttuser/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+
+
+
+
+.control
+tran 0.1n 100n 0
+write tb_OSC1.raw
+.endc
+
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  pad_model.sym # of pins=3
+** sym_path: /home/ttuser/tt_analog_z2a/xschem/pad_model.sym
+** sch_path: /home/ttuser/tt_analog_z2a/xschem/pad_model.sch
+.subckt pad_model VGND pin mod
+*.iopin pin
+*.iopin mod
+*.iopin VGND
+XM1 net3 VAPWR mod VGND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=60 nf=12 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 net3 VGND mod VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=180 nf=18 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+C1 pin VGND 2p m=1
+V1 VAPWR VGND 3.3
+R1 net1 pin 1 m=1
+L1 net2 net1 1n m=1
+C2 net2 VGND 3p m=1
+R2 net3 net2 50 m=1
+C3 mod VGND 250f m=1
+XM3 net3 VGND VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=60 nf=12 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=15 m=15
+XM4 net3 VAPWR VGND VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=180 nf=18 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=15 m=15
+.ends
+
+
+* expanding   symbol:  PASSGATE.sym # of pins=5
+** sym_path: /home/ttuser/tt_analog_z2a/xschem/PASSGATE.sym
+** sch_path: /home/ttuser/tt_analog_z2a/xschem/PASSGATE.sch
+.subckt PASSGATE VDD PASS_GATE_IN VSS PASS_GATE_EN PASS_GATE_OUT
+*.iopin PASS_GATE_IN
+*.ipin PASS_GATE_EN
+*.iopin VDD
+*.iopin VSS
+*.iopin PASS_GATE_OUT
+XM1pass PASS_GATE_ZEN PASS_GATE_EN VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=10 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM0pass PASS_GATE_ZEN PASS_GATE_EN VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=10 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM1 PASS_GATE_IN PASS_GATE_EN PASS_GATE_OUT VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 PASS_GATE_OUT PASS_GATE_ZEN PASS_GATE_IN VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  inv_x4.sym # of pins=4
+** sym_path: /home/ttuser/tt_analog_z2a/xschem/inv_x4.sym
+** sch_path: /home/ttuser/tt_analog_z2a/xschem/inv_x4.sch
+.subckt inv_x4 VDD VSS INV_OUT INV_IN
+*.ipin INV_IN
+*.opin INV_OUT
+*.iopin VDD
+*.iopin VSS
+XM3 INV_OUT INV_IN VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=4 m=4
+XM5 INV_OUT INV_IN VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=4 m=4
+.ends
+
+.GLOBAL GND
+.end

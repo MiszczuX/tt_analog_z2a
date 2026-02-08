@@ -1,0 +1,38 @@
+** sch_path: /home/ttuser/tt_analog_z2a_2/xschem/T_FLIP_FLOP.sch
+.subckt T_FLIP_FLOP Q T_IN CLK ZQ VDD VSS
+*.PININFO VDD:B VSS:B CLK:I ZQ:O Q:O T_IN:I
+x2 ZQ VDD out1 VSS Q NAND2
+x4 Q VDD out2 VSS ZQ NAND2
+x1 out1 VDD CLK VSS net1 NAND2
+x3 out2 VDD T_IN VSS CLK NAND2
+x24 VDD VSS net1 T_IN inv_x4
+.ends
+
+* expanding   symbol:  NAND2.sym # of pins=5
+** sym_path: /home/ttuser/tt_analog_z2a_2/xschem/NAND2.sym
+** sch_path: /home/ttuser/tt_analog_z2a_2/xschem/NAND2.sch
+.subckt NAND2 NAND_OUT VDD NAND_IN_1 VSS NAND_IN_0
+*.PININFO NAND_IN_0:I NAND_OUT:O VDD:B VSS:B NAND_IN_1:I
+XM0 net1 NAND_IN_0 VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM1 NAND_OUT NAND_IN_1 net1 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM12 NAND_OUT NAND_IN_0 VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM13 NAND_OUT NAND_IN_1 VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  inv_x4.sym # of pins=4
+** sym_path: /home/ttuser/tt_analog_z2a_2/xschem/inv_x4.sym
+** sch_path: /home/ttuser/tt_analog_z2a_2/xschem/inv_x4.sch
+.subckt inv_x4 VDD VSS INV_OUT INV_IN
+*.PININFO INV_IN:I INV_OUT:O VDD:B VSS:B
+XM3 INV_OUT INV_IN VDD VDD sky130_fd_pr__pfet_01v8 L=10 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM5 INV_OUT INV_IN VSS VSS sky130_fd_pr__nfet_01v8 L=10 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.end

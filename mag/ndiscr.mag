@@ -1,0 +1,69 @@
+magic
+tech sky130A
+timestamp 1769862601
+<< metal1 >>
+rect 200 2700 500 2800
+rect 900 2600 1800 2800
+rect 1100 1700 1800 2600
+rect 1900 1300 2000 1400
+rect 1100 900 1800 1000
+rect 200 490 400 500
+rect 200 410 210 490
+rect 390 410 400 490
+rect 200 400 400 410
+rect 200 0 300 100
+rect 200 -400 400 -300
+rect 1200 -600 1800 900
+rect 300 -800 500 -700
+rect 800 -800 1800 -600
+<< via1 >>
+rect 210 410 390 490
+rect 910 110 1090 190
+<< metal2 >>
+rect 200 490 400 500
+rect 200 410 210 490
+rect 390 410 400 490
+rect 200 400 400 410
+rect 900 190 1100 200
+rect 900 110 910 190
+rect 1090 110 1100 190
+rect 900 100 1100 110
+<< via2 >>
+rect 210 410 390 490
+rect 910 110 1090 190
+<< metal3 >>
+rect 200 490 1100 500
+rect 200 410 210 490
+rect 390 410 1100 490
+rect 200 400 1100 410
+rect 1000 200 1100 400
+rect 900 190 1100 200
+rect 900 110 910 190
+rect 1090 110 1100 190
+rect 900 100 1100 110
+use inv_x1  x6 ~/tt_analog_z2a_2/mag
+timestamp 1769862601
+transform 1 0 1000 0 1 1600
+box 100 -700 500 200
+use inv_x1  x7
+timestamp 1769862601
+transform 1 0 1400 0 1 1600
+box 100 -700 500 200
+use amp  x17
+timestamp 1769857700
+transform 1 0 -200 0 1 500
+box 400 -1300 1300 2300
+<< labels >>
+flabel metal1 300 -800 400 -700 0 FreeSans 128 0 0 0 VSS
+port 1 nsew
+flabel metal1 200 2700 300 2800 0 FreeSans 128 0 0 0 VDD
+port 0 nsew
+flabel metal1 200 -400 300 -300 0 FreeSans 128 0 0 0 DISCR_BIAS
+port 2 nsew
+flabel metal1 1900 1300 2000 1400 0 FreeSans 128 0 0 0 DISCR_OUT
+port 4 nsew
+flabel metal1 200 0 300 100 0 FreeSans 128 0 0 0 DISCR_IN
+port 3 nsew
+flabel metal1 200 400 300 500 0 FreeSans 128 0 0 0 DISCR_VREF
+port 5 nsew
+<< end >>

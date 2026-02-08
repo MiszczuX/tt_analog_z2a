@@ -1,0 +1,123 @@
+magic
+tech sky130A
+timestamp 1769862601
+<< metal1 >>
+rect 50 440 150 450
+rect 50 360 60 440
+rect 50 350 150 360
+rect 700 350 1350 450
+rect 50 190 150 200
+rect 50 110 60 190
+rect 50 100 150 110
+rect 50 -110 150 -100
+rect 50 -190 60 -110
+rect 50 -200 150 -190
+rect 50 -410 150 -400
+rect 50 -490 60 -410
+rect 50 -500 150 -490
+rect 1050 -550 1350 350
+rect 50 -710 150 -700
+rect 50 -790 60 -710
+rect 50 -800 150 -790
+rect 1450 -950 1550 -850
+rect 50 -1010 150 -1000
+rect 50 -1090 60 -1010
+rect 50 -1100 150 -1090
+rect 50 -1310 150 -1300
+rect 50 -1390 60 -1310
+rect 50 -1400 150 -1390
+rect 50 -1610 150 -1600
+rect 50 -1690 60 -1610
+rect 50 -1700 150 -1690
+rect 50 -1910 150 -1900
+rect 50 -1990 60 -1910
+rect 50 -2000 150 -1990
+rect 1050 -2150 1350 -1350
+rect 50 -2160 150 -2150
+rect 50 -2240 60 -2160
+rect 50 -2250 150 -2240
+rect 500 -2250 1350 -2150
+<< via1 >>
+rect 60 360 240 440
+rect 60 110 240 190
+rect 60 -190 240 -110
+rect 60 -490 240 -410
+rect 60 -790 240 -710
+rect 60 -1090 240 -1010
+rect 60 -1390 240 -1310
+rect 60 -1690 240 -1610
+rect 60 -1990 240 -1910
+rect 60 -2240 240 -2160
+<< metal2 >>
+rect 50 440 250 450
+rect 50 360 60 440
+rect 240 360 250 440
+rect 50 350 250 360
+rect 50 190 250 200
+rect 50 110 60 190
+rect 240 110 250 190
+rect 50 100 250 110
+rect 50 -110 250 -100
+rect 50 -190 60 -110
+rect 240 -190 250 -110
+rect 50 -200 250 -190
+rect 50 -410 250 -400
+rect 50 -490 60 -410
+rect 240 -490 250 -410
+rect 50 -500 250 -490
+rect 50 -710 250 -700
+rect 50 -790 60 -710
+rect 240 -790 250 -710
+rect 50 -800 250 -790
+rect 50 -1010 250 -1000
+rect 50 -1090 60 -1010
+rect 240 -1090 250 -1010
+rect 50 -1100 250 -1090
+rect 50 -1310 250 -1300
+rect 50 -1390 60 -1310
+rect 240 -1390 250 -1310
+rect 50 -1400 250 -1390
+rect 50 -1610 250 -1600
+rect 50 -1690 60 -1610
+rect 240 -1690 250 -1610
+rect 50 -1700 250 -1690
+rect 50 -1910 250 -1900
+rect 50 -1990 60 -1910
+rect 240 -1990 250 -1910
+rect 50 -2000 250 -1990
+rect 50 -2160 250 -2150
+rect 50 -2240 60 -2160
+rect 240 -2240 250 -2160
+rect 50 -2250 250 -2240
+use NAND  x5
+timestamp 1769862601
+transform 1 0 150 0 1 50
+box 0 -2300 900 400
+use inv_x1  x28 ~/tt_analog_z2a_2/mag
+timestamp 1769862601
+transform 1 0 950 0 1 -650
+box 100 -700 500 200
+<< labels >>
+flabel metal1 50 -2000 150 -1900 0 FreeSans 128 0 0 0 AND_IN_0_2
+port 10 nsew
+flabel metal1 50 -1700 150 -1600 0 FreeSans 128 0 0 0 AND_IN_0_4
+port 9 nsew
+flabel metal1 50 -1400 150 -1300 0 FreeSans 128 0 0 0 AND_IN_0_6
+port 8 nsew
+flabel metal1 50 350 150 450 0 FreeSans 128 0 0 0 VDD
+port 0 nsew
+flabel metal1 50 -2250 150 -2150 0 FreeSans 128 0 0 0 VSS
+port 1 nsew
+flabel metal1 50 100 150 200 0 FreeSans 128 0 0 0 AND_IN_1_6
+port 2 nsew
+flabel metal1 50 -200 150 -100 0 FreeSans 128 0 0 0 AND_IN_1_4
+port 3 nsew
+flabel metal1 50 -500 150 -400 0 FreeSans 128 0 0 0 AND_IN_1_2
+port 4 nsew
+flabel metal1 50 -800 150 -700 0 FreeSans 128 0 0 0 AND_IN_1_0
+port 5 nsew
+flabel metal1 50 -1100 150 -1000 0 FreeSans 128 0 0 0 AND_IN_0_8
+port 7 nsew
+flabel metal1 1450 -950 1550 -850 0 FreeSans 128 0 0 0 AND_OUT
+port 6 nsew
+<< end >>

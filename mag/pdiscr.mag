@@ -1,0 +1,42 @@
+magic
+tech sky130A
+timestamp 1769862601
+<< metal1 >>
+rect 400 1900 700 2000
+rect 1000 1800 2300 2000
+rect 400 1500 600 1600
+rect 400 600 1500 700
+rect 1400 300 1500 600
+rect 400 200 500 300
+rect 1600 200 2300 1800
+rect 1400 -200 1600 -100
+rect 2400 -200 2500 -100
+rect 1600 -1400 2300 -500
+rect 400 -1500 500 -1400
+rect 1200 -1500 2300 -1400
+use amp_p  x5
+timestamp 1769859645
+transform 1 0 200 0 1 200
+box 300 -1700 1300 1800
+use inv_x1  x6 ~/tt_analog_z2a_2/mag
+timestamp 1769862601
+transform 1 0 1500 0 1 100
+box 100 -700 500 200
+use inv_x1  x7
+timestamp 1769862601
+transform 1 0 1900 0 1 100
+box 100 -700 500 200
+<< labels >>
+flabel metal1 400 -1500 500 -1400 0 FreeSans 128 0 0 0 VSS
+port 1 nsew
+flabel metal1 400 1900 500 2000 0 FreeSans 128 0 0 0 VDD
+port 0 nsew
+flabel metal1 2400 -200 2500 -100 0 FreeSans 128 0 0 0 DISCR_OUT
+port 4 nsew
+flabel metal1 400 1500 500 1600 0 FreeSans 128 0 0 0 DISCR_BIAS
+port 2 nsew
+flabel metal1 400 600 500 700 0 FreeSans 128 0 0 0 DISCR_VREF
+port 5 nsew
+flabel metal1 400 200 500 300 0 FreeSans 128 0 0 0 DISCR_IN
+port 3 nsew
+<< end >>

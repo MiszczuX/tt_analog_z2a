@@ -134,9 +134,9 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} -320 -250 0 0 {name=M2
 L=1
-W=1
-nf=1 
-mult=4
+W=4
+nf=1
+mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 

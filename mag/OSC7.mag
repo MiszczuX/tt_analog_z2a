@@ -1,0 +1,61 @@
+magic
+tech sky130A
+timestamp 1769635987
+<< metal1 >>
+rect 500 300 600 400
+rect 100 50 400 100
+rect 100 -150 150 50
+rect 350 0 400 50
+rect 10200 50 10500 100
+rect 350 -100 500 0
+rect 350 -150 400 -100
+rect 100 -200 400 -150
+rect 10200 -150 10250 50
+rect 10450 -150 10500 50
+rect 10200 -200 10500 -150
+rect 500 -400 600 -300
+<< via1 >>
+rect 150 -150 350 50
+rect 10250 -150 10450 50
+<< metal2 >>
+rect 100 50 10500 100
+rect 100 -150 150 50
+rect 350 -150 10250 50
+rect 10450 -150 10500 50
+rect 100 -200 10500 -150
+use inv_x4  x5 ~/tt_analog_z2a_2/mag
+timestamp 1769635883
+transform 1 0 1500 0 1 100
+box 400 -600 1800 400
+use inv_x4  x6
+timestamp 1769635883
+transform 1 0 2900 0 1 100
+box 400 -600 1800 400
+use inv_x4  x8
+timestamp 1769635883
+transform 1 0 100 0 1 100
+box 400 -600 1800 400
+use inv_x4  x13
+timestamp 1769635883
+transform 1 0 4300 0 1 100
+box 400 -600 1800 400
+use inv_x4  x14
+timestamp 1769635883
+transform 1 0 5700 0 1 100
+box 400 -600 1800 400
+use inv_x4  x15
+timestamp 1769635883
+transform 1 0 7100 0 1 100
+box 400 -600 1800 400
+use inv_x4  x16
+timestamp 1769635883
+transform 1 0 8500 0 1 100
+box 400 -600 1800 400
+<< labels >>
+flabel metal1 500 300 600 400 0 FreeSans 128 0 0 0 VDD
+port 0 nsew
+flabel metal1 500 -400 600 -300 0 FreeSans 128 0 0 0 VSS
+port 1 nsew
+flabel via1 10300 -100 10400 0 0 FreeSans 128 0 0 0 OUT_OSC7
+port 2 nsew
+<< end >>

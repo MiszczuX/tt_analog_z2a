@@ -1,0 +1,43 @@
+magic
+tech sky130A
+timestamp 1769852641
+<< metal1 >>
+rect 400 300 500 400
+rect 100 50 400 100
+rect 100 -150 150 50
+rect 350 -150 400 50
+rect 100 -200 400 -150
+rect 4500 50 4750 100
+rect 4500 -150 4550 50
+rect 4700 -150 4750 50
+rect 4500 -200 4750 -150
+rect 400 -400 500 -300
+<< via1 >>
+rect 150 -150 350 50
+rect 4550 -150 4700 50
+<< metal2 >>
+rect 100 50 4750 100
+rect 100 -150 150 50
+rect 350 -150 4550 50
+rect 4700 -150 4750 50
+rect 100 -200 4750 -150
+use inv_x4  x19
+timestamp 1769635883
+transform 1 0 0 0 1 100
+box 400 -600 1800 400
+use inv_x4  x20
+timestamp 1769635883
+transform 1 0 1400 0 1 100
+box 400 -600 1800 400
+use inv_x4  x21
+timestamp 1769635883
+transform 1 0 2800 0 1 100
+box 400 -600 1800 400
+<< labels >>
+flabel metal1 400 300 500 400 0 FreeSans 128 0 0 0 VDD
+port 0 nsew
+flabel metal1 400 -400 500 -300 0 FreeSans 128 0 0 0 VSS
+port 1 nsew
+flabel via1 4600 -100 4700 0 0 FreeSans 128 0 0 0 OUT_OSC3
+port 2 nsew
+<< end >>
