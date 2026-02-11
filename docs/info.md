@@ -35,3 +35,4 @@ Ponizej link do pelnej listy testow:
 - Laboratory power supply or other voltage source with the ability to set voltages in the range of 0-1.8V
 - Multimeter
 - Oscilloscope
+- Time!
