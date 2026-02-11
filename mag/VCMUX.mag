@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1770560933
+timestamp 1770841401
 << error_s >>
 rect 2000 1600 2028 1628
 rect 4500 1600 4528 1628
@@ -1385,35 +1385,35 @@ timestamp 1770560933
 transform 1 0 9100 0 1 8100
 box -3100 -11100 4000 1900
 use PASSGATE  x9
-timestamp 1770560933
+timestamp 1770841401
 transform 1 0 11100 0 1 5800
 box 200 -800 1619 911
 use PASSGATE  x10
-timestamp 1770560933
+timestamp 1770841401
 transform 1 0 11100 0 1 3100
 box 200 -800 1619 911
 use PASSGATE  x11
-timestamp 1770560933
+timestamp 1770841401
 transform 1 0 11100 0 1 400
 box 200 -800 1619 911
 use PASSGATE  x12
-timestamp 1770560933
+timestamp 1770841401
 transform 1 0 11100 0 1 -2300
 box 200 -800 1619 911
 use PASSGATE  x13
-timestamp 1770560933
+timestamp 1770841401
 transform 1 0 5300 0 1 -4700
 box 200 -800 1619 911
 use PASSGATE  x14
-timestamp 1770560933
+timestamp 1770841401
 transform 1 0 7300 0 1 -4700
 box 200 -800 1619 911
 use PASSGATE  x15
-timestamp 1770560933
+timestamp 1770841401
 transform 1 0 9300 0 1 -4700
 box 200 -800 1619 911
 use PASSGATE  x16
-timestamp 1770560933
+timestamp 1770841401
 transform 1 0 11100 0 1 -4700
 box 200 -800 1619 911
 << labels >>

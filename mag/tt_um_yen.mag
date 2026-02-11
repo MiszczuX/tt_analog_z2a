@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1770560933
+timestamp 1770841401
 << metal1 >>
 rect 1300 19800 1800 19900
 rect 1300 19600 1400 19800
@@ -163,8 +163,8 @@ rect 9385 0 9475 100
 rect 11317 0 11407 100
 rect 13249 0 13339 100
 rect 15181 0 15271 100
-use yen_top  yen_top_0
-timestamp 1770560933
+use yen_top  yen_top_0 ~/tt_analog_z2a/mag
+timestamp 1770841401
 transform 1 0 -479000 0 1 -541300
 box 479100 541600 495000 562000
 << labels >>
