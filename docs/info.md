@@ -27,9 +27,6 @@ Test 2 - System performance.
 Now that you know each threshold, test each circuit. For example:
 set to ua[1] 300mV. On ua[0] you should see the ring output of the oscillator consisting of 3 inverters. Record frequency, apmlidute peak-peak and DC level. If so, can you also take a photo of the shape of the clock.
 
-Below is a link to the full list of tests:
-Ponizej link do pelnej listy testow:
-
 
 # External hardware
 - Laboratory power supply or other voltage source with the ability to set voltages in the range of 0-1.8V

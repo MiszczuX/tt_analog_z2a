@@ -1,15 +1,11 @@
-** sch_path: /home/ttuser/tt_analog_z2a/xschem/tb_VCMUX.sch
-**.subckt tb_VCMUX
+** sch_path: /home/ttuser/tt_analog_z2a/xschem/untitled.sch
+**.subckt untitled
 V2 VSS GND 0
-x3 VSS net1 VCMUXIN pad_model
-x4 VSS VCMUX_PINOUT VCMUX_OUT pad_model
 VDD VDD GND 1.8
-V3 net1 GND PULSE(0 1.8 0 100u 100u 100u 500u)
-x1 net2 VCMUXIN_RCC VSS VDD yen_top_parax
-x2 VDD VSS VCMUXIN VCMUX_OUT yen_top
-x5 VSS VCMUX_PINOUT_RCC net2 pad_model
-x6 VSS net3 VCMUXIN_RCC pad_model
-V1 net3 GND PULSE(0 1.8 0 100u 100u 100u 500u)
+x1 net1 VCMUXIN_RCC VSS VDD yen_top_parax
+x5 VSS VCMUX_PINOUT_RCC net1 pad_model
+x6 VSS net2 VCMUXIN_RCC pad_model
+VDD1 net2 GND 0.3
 **** begin user architecture code
 
 ** opencircuitdesign pdks install
@@ -20,10 +16,10 @@ V1 net3 GND PULSE(0 1.8 0 100u 100u 100u 500u)
 
 
 .control
-tran 100n 100u
-meas tran Iavg AVG i(VDD) from=1u to=100u
-meas tran Imax MAX i(VDD) from=1u to=100u
-meas tran Imin MIN i(VDD) from=1u to=100u
+tran 100n 10u
+meas tran Iavg AVG i(VDD) from=1u to=10u
+meas tran Imax MAX i(VDD) from=1u to=10u
+meas tran Imin MIN i(VDD) from=1u to=10u
 
 write tb_VCMUX.raw
 .endc
@@ -32,6 +28,27 @@ write tb_VCMUX.raw
 
 **** end user architecture code
 **.ends
+
+* expanding   symbol:  yen_top.sym # of pins=4
+** sym_path: /home/ttuser/tt_analog_z2a/xschem/yen_top.sym
+** sch_path: /home/ttuser/tt_analog_z2a/xschem/yen_top.sch
+.subckt yen_top VDD VSS VCMUXIN VCMUXOUT
+*.iopin VDD
+*.iopin VSS
+*.iopin VCMUXIN
+*.iopin VCMUXOUT
+x2 vbg_1_6 vbg_1_4 vbg_1_2 vbg_1_0 vbg_0_8 vbg_0_6 vbg_0_4 vbg_0_2 VDD VSS BG
+x1 in_1_6 VCMUXOUT in_1_4 in_1_2 in_1_0 in_0_8 in_0_6 in_0_4 in_0_2 vbg_1_6 VDD vbg_1_4 VSS vbg_1_2 vbg_1_0 vbg_0_8 vbg_0_6
++ vbg_0_4 vbg_0_2 VCMUXIN VCMUX
+x5 in_0_8 VDD in_0_6 in_0_4 VDD VSS T_FLIP_FLOP
+x7 VDD VSS in_1_2 in_1_0 inv_x1
+x9 bg16 bg14 bg12 bg10 bg08 bg06 bg04 in_1_6 VDD VSS BG
+x3 VDD VSS in_0_2 OSC3
+x4 VDD VSS in_0_6 OSC5
+x6 VDD VSS in_1_0 OSC7
+x8 VDD VSS in_1_4 OSC5cap
+.ends
+
 
 * expanding   symbol:  pad_model.sym # of pins=3
 ** sym_path: /home/ttuser/tt_analog_z2a/xschem/pad_model.sym
@@ -55,27 +72,6 @@ XM3 net3 VGND VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=60 nf=12 ad='int((n
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=15 m=15
 XM4 net3 VAPWR VGND VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=180 nf=18 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=15 m=15
-.ends
-
-
-* expanding   symbol:  yen_top.sym # of pins=4
-** sym_path: /home/ttuser/tt_analog_z2a/xschem/yen_top.sym
-** sch_path: /home/ttuser/tt_analog_z2a/xschem/yen_top.sch
-.subckt yen_top VDD VSS VCMUXIN VCMUXOUT
-*.iopin VDD
-*.iopin VSS
-*.iopin VCMUXIN
-*.iopin VCMUXOUT
-x2 vbg_1_6 vbg_1_4 vbg_1_2 vbg_1_0 vbg_0_8 vbg_0_6 vbg_0_4 vbg_0_2 VDD VSS BG
-x1 in_1_6 VCMUXOUT in_1_4 in_1_2 in_1_0 in_0_8 in_0_6 in_0_4 in_0_2 vbg_1_6 VDD vbg_1_4 VSS vbg_1_2 vbg_1_0 vbg_0_8 vbg_0_6
-+ vbg_0_4 vbg_0_2 VCMUXIN VCMUX
-x5 in_0_8 VDD in_0_6 in_0_4 VDD VSS T_FLIP_FLOP
-x7 VDD VSS in_1_2 in_1_0 inv_x1
-x9 bg16 bg14 bg12 bg10 bg08 bg06 bg04 in_1_6 VDD VSS BG
-x3 VDD VSS in_0_2 OSC3
-x4 VDD VSS in_0_6 OSC5
-x6 VDD VSS in_1_0 OSC7
-x8 VDD VSS in_1_4 OSC5cap
 .ends
 
 

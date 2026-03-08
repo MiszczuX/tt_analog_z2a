@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 1010 -550 1810 -150 {flags=graph
-y1=0.12753083
-y2=1.1574846
+y1=-0.47414164
+y2=1.5369785
 ypos1=0.24620885
 ypos2=2.3200897
 
 subdivy=1
 unity=1
-x1=7.8355144e-05
-x2=8.0522093e-05
+x1=-1.6083281e-05
+x2=8.3532641e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -30,9 +30,11 @@ logy=0
 divy=10
 
 
-color="6 7"
+color="6 7 4 10"
 node="vcmux_pinout
-vcmuxin"
+vcmuxin
+vcmux_pinout_rcc
+vcmuxin_rcc"
 digital=0}
 B 2 1350 -1070 2150 -670 {flags=graph
 y1=-0.1409795
@@ -42,8 +44,8 @@ ypos2=2.2163961
 
 subdivy=1
 unity=1
-x1=7.8355144e-05
-x2=8.0522093e-05
+x1=-1.6083281e-05
+x2=8.3532641e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -73,34 +75,6 @@ N 200 -300 200 -280 {
 lab=VDD}
 N 300 -300 300 -280 {
 lab=VSS}
-N 440 -400 440 -380 {
-lab=#net1}
-N 440 -570 440 -520 {
-lab=VCMUXIN}
-N 740 -570 780 -570 {
-lab=VCMUX_OUT}
-N 900 -570 920 -570 {
-lab=VCMUX_PINOUT}
-N 600 -670 600 -640 {
-lab=VSS}
-N 600 -640 600 -630 {
-lab=VSS}
-N 500 -460 500 -430 {
-lab=VSS}
-N 500 -430 500 -420 {
-lab=VSS}
-N 440 -300 440 -280 {
-lab=GND}
-N 440 -380 440 -360 {
-lab=#net1}
-N 580 -670 580 -640 {
-lab=VDD}
-N 580 -640 580 -630 {
-lab=VDD}
-N 840 -510 840 -480 {
-lab=VSS}
-N 840 -480 840 -470 {
-lab=VSS}
 N 600 -840 600 -810 {
 lab=VSS}
 N 600 -810 600 -800 {
@@ -110,7 +84,7 @@ lab=VDD}
 N 580 -810 580 -800 {
 lab=VDD}
 N 740 -750 780 -750 {
-lab=#net2}
+lab=#net1}
 N 900 -750 920 -750 {
 lab=VCMUX_PINOUT_RCC}
 N 840 -690 840 -660 {
@@ -118,7 +92,7 @@ lab=VSS}
 N 840 -660 840 -650 {
 lab=VSS}
 N 100 -580 100 -560 {
-lab=#net3}
+lab=#net2}
 N 100 -750 100 -700 {
 lab=VCMUXIN_RCC}
 N 160 -640 160 -610 {
@@ -128,7 +102,7 @@ lab=VSS}
 N 100 -480 100 -460 {
 lab=GND}
 N 100 -560 100 -540 {
-lab=#net3}
+lab=#net2}
 N 100 -750 440 -750 {
 lab=VCMUXIN_RCC}
 C {devices/launcher.sym} 100 -340 0 0 {name=h17 
@@ -159,25 +133,15 @@ simulator=ngspice
 only_toplevel=false 
 value="
 .control
-tran 100n 100u
-meas tran Iavg AVG i(VDD) from=1u to=100u
-meas tran Imax MAX i(VDD) from=1u to=100u
-meas tran Imin MIN i(VDD) from=1u to=100u
+tran 100n 10u
+meas tran Iavg AVG i(VDD) from=1u to=10u
+meas tran Imax MAX i(VDD) from=1u to=10u
+meas tran Imin MIN i(VDD) from=1u to=10u
 
 write tb_VCMUX.raw
 .endc
 "}
-C {devices/lab_wire.sym} 440 -540 0 0 {name=p19 sig_type=std_logic lab=VCMUXIN
-}
-C {devices/lab_wire.sym} 920 -570 0 1 {name=p9 sig_type=std_logic lab=VCMUX_PINOUT}
-C {pad_model.sym} 440 -520 3 0 {name=x3}
-C {pad_model.sym} 780 -570 0 1 {name=x4}
-C {devices/lab_wire.sym} 600 -650 3 1 {name=p25 sig_type=std_logic lab=VSS}
-C {devices/lab_wire.sym} 500 -420 3 1 {name=p26 sig_type=std_logic lab=VSS}
-C {devices/gnd.sym} 440 -280 0 0 {name=l4 lab=GND}
-C {devices/lab_wire.sym} 750 -570 0 1 {name=p34 sig_type=std_logic lab=VCMUX_OUT}
 C {devices/vsource.sym} 200 -250 0 0 {name=VDD value=1.8 savecurrent=false}
-C {devices/vsource.sym} 440 -330 0 0 {name=V3 value="PULSE(0 1.8 0 100u 100u 100u 500u)" savecurrent=false}
 C {yen_top.sym} 590 -750 0 0 {name=x1
 schematic=yen_top_parax.sim
 
@@ -185,9 +149,6 @@ spice_sym_def="tcleval(.include [file normalize ../mag/yen_top.sim.spice])"
 
 tclcommand="textwindow [file normalize ../mag/yen_top.sim.spice]"
 }
-C {devices/lab_wire.sym} 580 -650 3 1 {name=p1 sig_type=std_logic lab=VDD}
-C {devices/lab_wire.sym} 840 -470 3 1 {name=p2 sig_type=std_logic lab=VSS}
-C {yen_top.sym} 590 -570 0 0 {name=x2}
 C {devices/lab_wire.sym} 600 -820 3 1 {name=p3 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 580 -820 3 1 {name=p4 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 920 -750 0 1 {name=p7 sig_type=std_logic lab=VCMUX_PINOUT_RCC}
@@ -198,4 +159,4 @@ C {devices/lab_wire.sym} 100 -720 0 0 {name=p10 sig_type=std_logic lab=VCMUXIN_R
 C {pad_model.sym} 100 -700 3 0 {name=x6}
 C {devices/lab_wire.sym} 160 -600 3 1 {name=p11 sig_type=std_logic lab=VSS}
 C {devices/gnd.sym} 100 -460 0 0 {name=l3 lab=GND}
-C {devices/vsource.sym} 100 -510 0 0 {name=V1 value="PULSE(0 1.8 0 100u 100u 100u 500u)" savecurrent=false}
+C {devices/vsource.sym} 100 -510 0 0 {name=VDD1 value=0.3 savecurrent=false}
